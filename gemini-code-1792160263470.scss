@@ -1,0 +1,17 @@
+// Mixin Flexbox nhanh
+@mixin flex($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// Mixin Media Query Responsive
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 768px) { @content; }
+  }
+  @if $breakpoint == tablet {
+    @media (min-width: 769px) and (max-width: 1024px) { @content; }
+  }
+}

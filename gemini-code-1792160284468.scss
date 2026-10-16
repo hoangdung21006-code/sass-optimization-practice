@@ -1,0 +1,21 @@
+.footer {
+  @include flex(space-between, center);
+  padding: 20px 40px;
+  background: $secondary-color;
+  color: $white;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  @include respond-to(mobile) {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+
+    @include respond-to(mobile) {
+      text-align: center;
+    }
+  }
+}
